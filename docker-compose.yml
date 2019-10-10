@@ -1,0 +1,6 @@
+version: '3.1'
+services:
+
+  dbmate:
+    container_name: dbmate
+    build: .
