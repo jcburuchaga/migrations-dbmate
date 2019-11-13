@@ -16,6 +16,14 @@ RUN cp mysql-connector-odbc-5.3.10-linux-ubuntu16.04-x86-64bit/lib/libmyodbc5* /
 
 RUN mysql-connector-odbc-5.3.10-linux-ubuntu16.04-x86-64bit/bin/myodbc-installer -d -a -n "MySQL" -t "DRIVER=/usr/lib/x86_64-linux-gnu/odbc/libmyodbc5w.so;"
 
+RUN wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz
+
+RUN tar -xvf go1.13.3.linux-amd64.tar.gz
+
+RUN mv go /usr/local
+
+RUN export GOROOT=/usr/local/go
+
 RUN wget -O dbmate https://github.com/amacneil/dbmate/releases/download/v1.6.0/dbmate-linux-amd64
 
 RUN chmod +x dbmate
