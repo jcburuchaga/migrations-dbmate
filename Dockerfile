@@ -4,6 +4,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	ca-certificates \
 	wget \
 	postgresql-client \
+	mysql-client-5.7 \
 	sqlite3 \
 	&& rm -rf /var/lib/apt/lists/*
 
