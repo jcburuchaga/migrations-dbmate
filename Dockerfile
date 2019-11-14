@@ -4,7 +4,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	ca-certificates \
 	wget \
 	unixodbc \
-	libmyodbc \
 	mysql-client \
 	ssh \
 	postgresql-client \
