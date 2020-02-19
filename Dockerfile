@@ -11,6 +11,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	sqlite3 \
 	&& rm -rf /var/lib/apt/lists/*
 
+#aws cli install
+RUN apt-get update \
+	&& apt-get install -y python-pip curl\
+	&& pip install awscli \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN wget -O dbmate https://github.com/amacneil/dbmate/releases/download/v1.6.0/dbmate-linux-amd64
 
 RUN chmod +x dbmate
