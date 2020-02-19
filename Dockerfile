@@ -1,7 +1,6 @@
 FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    python-pip \
 	ca-certificates \
 	wget \
 	unixodbc \
@@ -14,6 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 #aws cli install
 RUN apt-get update \
 	&& apt-get install -y python-pip curl\
+	&& pip install --upgrade setuptools \
 	&& pip install awscli \
     && rm -rf /var/lib/apt/lists/*
 
