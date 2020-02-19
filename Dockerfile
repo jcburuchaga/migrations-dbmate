@@ -1,7 +1,6 @@
 FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-	php5-mcrypt \
     python-pip \
 	ca-certificates \
 	wget \
